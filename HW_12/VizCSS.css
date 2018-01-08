@@ -1,0 +1,64 @@
+body{
+    background-color: lightgray
+}
+
+nav{
+    background-color: white;
+}
+
+
+
+
+.container-fluid{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.col-md-4{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.col-md-8{
+
+    background-color: white;
+    padding-left: 10px;
+
+
+}
+
+h2{
+    color:   #00b3b3; 
+    padding-top: 10px;
+}
+
+
+
+footer {
+    background-color: #555;
+    color: white;
+    }
+
+footer div.container{
+    padding-top: 5px;
+    text-align: center;
+    font-size: .7rem;
+   
+}
+
+
+    
+
+
+img.img-thumbnail{
+    width:50%;
+}
+
+
+
+@media screen and (max-width: 480px){
+}

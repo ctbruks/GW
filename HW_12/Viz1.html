@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Latitude vs Temperature Visualization </title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="VizCSS.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light" style="background-color: white">
+    <a class="navbar-brand" href="#"><b>Latitude</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04"     aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>      
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Comparisons <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="#">Cloudiness</a>
+              <a class="dropdown-item" href="#">Humidity</a>
+              <a class="dropdown-item" href="#">Wind Speed</a>
+              <a class="dropdown-item" href="#">Temperature</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class = "container-fluid">
+    <div class="row ">
+      <div class="col-md-8">
+        <h2> Max Temperature </h2><hr>
+        <figure class="figure">
+            <img class = "figure-img img-fluid" src = "max_temp.png" alt="Latitude vs. Temperature">
+            <figcaption class="figure-caption text-center"><cite>Latitude vs. Temperature</cite></figcaption>
+        </figure>
+        <p class="text-center"> The chart above clearly demonstrates that there is a relationship between latitude and temperature. In fact, the further away a city is 
+            from the equator, the cooler it's temperature. This is because the spherical shape of the Earth means that not every place receives
+            the same amount of sunlight or heat. Also the Earth sits at angle which also affects how much sunlight a location receives and is the reason why the Northern and
+            Southern Hemisphere always have different seasons at the same time. 
+        </p>
+      </div>
+     
+      <div class = "col-md-4">
+        <h2> Visualizations</h2> <hr>
+          <div class="d-inline-block"> <!--do for each?-->
+            <a href="#">
+              <img src="max_temp.png" class ="img-thumbnail img-fluid float-left active" alt="Latitude vs. Temperature"
+              style="border:1">
+            </a>
+            <a href="#">
+                <img src="cloudiness.png" class ="img-thumbnail img-fluid float-right" alt="Cloudness vs. Temperature"
+                style="border:1">
+            </a>
+          </div>
+          <div class="d-inline-block">
+            <a href="#">
+                <img src="humidity.png" class ="img-thumbnail img-fluid float-left" alt="Humidity vs. Temperature"
+                style="border:1">
+            </a> 
+            <a href="#">
+                <img src="windspeed.png" class ="img-thumbnail img-fluid float-right" alt="Wind Speed vs. Temperature"
+                style="border:1">
+            </a>
+          </div>        
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer">
+  <div class="container ">© Copyright Coding Bootcamp 2017</div>
+</footer>
+  
+
+</body>
