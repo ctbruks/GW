@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Diversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div class = "container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4 "><b>Belly Button Biodiversity <br> Dashboard</b></h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+        </div>
+    </div>
+    <div id='MyPiePlot'></div>
+    <script>
+        function build_pie(data){
+            var pie_layout = {
+                height: 500,
+                width: 500
+            };
+            var top_ten = data[0]['otu_ids'].sort((a,b)=>a>b).slice(0,10);
+            console.log(top_ten);
+            var pie_data = {
+                values: top_ten,
+                labels: data[1]['sample_values'],
+                type:'pie'
+            }
+            var pie_plot = document.getElementById('MyPiePlot');
+            Plotly.plot(pie_plot, data, pie_layout)
+        }
+
+        // function build_bubble(data){
+        //     var bubble_data = {
+        //         x:data[0]['otu_ids'],
+        //         y:
+        //     }
+
+        // }
+
+        function getData(){
+            Plotly.d3.json('/samples/<sample>', function(error, data){
+                build_pie(data)
+                // build_bubble(data)
+            })
+        }
+        getData();
+    </script>
+</body>
+
+</html>

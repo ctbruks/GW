@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[31]:
-
-#Import dependencies
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import requests as req
