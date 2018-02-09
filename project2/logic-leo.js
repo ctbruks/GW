@@ -34,7 +34,7 @@ d3.json(geojson_link, function(data){
         L.choropleth(data, {
             valueProperty:"sentiment_score",
             // Color scale
-            scale: ["#ffffb2", "#b10026"],
+            scale: ["#ffeda0", "#f03b20"],
             // Number of breaks in step range
             steps: 10,
             // q for quantile, e for equidistant, k for k-means
@@ -42,9 +42,18 @@ d3.json(geojson_link, function(data){
             style: {
             // Border color
             color: "#fff",
-            weight: 1,
+            weight: 2,
+            opacity: 1,
+            dashArray:'3',
             fillOpacity: 0.8
-            }}).addTo(myMap);
+            },
+            // Binding a pop-up to each layer
+            onEachFeature: function(feature, layer) {
+            layer.bindPopup(feature.properties.neighbourhood + "<hr/>"+ "Sentiment Score:" + feature.properties.sentiment_score.toFixed(2));
+        }
+    }
+        
+        ).addTo(myMap);
     })
 })
 
